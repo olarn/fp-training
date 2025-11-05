@@ -24,4 +24,11 @@ describe('incrementThenToString', () => {
       myFlow(1)
     ).toEqual('2')
   })
+
+  it('should work when reuse increment multiple times', () => {
+    const myFlow = flow(increment, increment, increment, toString)
+    expect(
+      myFlow(1)
+    ).toEqual('4')
+  })
 })
