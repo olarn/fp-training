@@ -5,8 +5,10 @@
   "main": "app.js",
   "scripts": {
     "dev": "ts-node src/app.ts",
-    "test": "jest",
-    "test:watch": "jest --watchAll --coverage",
+    "test": "jest --reporters=default",
+    "test:spec": "jest --reporters=jest-spec-reporter",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll",
     "watch": "nodemon",
     "build": "tsc --project ./"
   },
@@ -19,6 +21,7 @@
     "@typescript-eslint/parser": "^8.36.0",
     "eslint": "^9.30.1",
     "jest": "^30.0.4",
+    "jest-spec-reporter": "^1.0.19",
     "nodemon": "^3.0.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",

@@ -45,7 +45,7 @@ npm run dev
 
 4. **Run tests to verify unit tests setup:**
 ```bash
-npm test
+npm run test
 ```
 
 ## 📁 Project Structure
@@ -63,8 +63,10 @@ src/
 |--------|-------------|
 | `npm run dev` | Run `src/app.ts` with ts-node |
 | `npm run watch` | Run with nodemon (reload on changes) |
-| `npm test` | Run all tests with Jest |
-| `npm run test:watch` | Jest watch all tests with coverage |
+| `npm test` | Run all tests with Jest (default reporter) |
+| `npm run test:spec` | Run all tests with spec reporter |
+| `npm run test:coverage` | Run all tests with coverage report |
+| `npm run test:watch` | Jest watch mode (reload on file changes) |
 | `npm run build` | Build TypeScript to `dist/` |
 
 ## 📚 Learning Modules
@@ -79,13 +81,19 @@ src/
 
 ### Running Tests
 ```bash
-# Run all tests
+# Run all tests (default reporter)
 npm test
+
+# Run all tests (spec reporter)
+npm run test:spec
+
+# Run all tests with coverage
+npm run test:coverage
 
 # Run specific test file
 npx jest /src/01-TypeScript/typescript.test.ts
 
-# Watch all tests with coverage
+# Watch all tests (auto-reload on file changes)
 npm run test:watch
 ```
 
