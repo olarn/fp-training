@@ -38,7 +38,12 @@ cd <project-folder>
 npm install
 ```
 
-3. **Run tests to verify setup:**
+3. **Run app to verify setup:**
+```bash
+npm run dev
+```
+
+4. **Run tests to verify unit tests setup:**
 ```bash
 npm test
 ```
@@ -127,9 +132,6 @@ Add to your VSCode settings (File > Preferences > Settings > Open Settings JSON)
 ### Core Dependencies (from `package.json`)
 - **effect** (^3.16.12)
 - **ts-pattern** (^5.6.2)
-- **papaparse** (^5.4.1)
-- **ws** (^8.14.2)
-
 ### Development Dependencies (from `package.json`)
 - **typescript** (^5.2.2)
 - **jest** (^30.0.4)
@@ -139,6 +141,7 @@ Add to your VSCode settings (File > Preferences > Settings > Open Settings JSON)
 - **eslint** (^9.30.1)
 - **@typescript-eslint/eslint-plugin** (^8.36.0)
 - **@typescript-eslint/parser** (^8.36.0)
+- **@types/jest** (^30.0.0)
 
 ### Common Issues
 

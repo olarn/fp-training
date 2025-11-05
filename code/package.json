@@ -15,8 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^30.0.0",
-    "@types/papaparse": "^5.3.9",
-    "@types/ws": "^8.5.6",
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
     "eslint": "^9.30.1",
@@ -28,8 +26,6 @@
   },
   "dependencies": {
     "effect": "^3.16.12",
-    "papaparse": "^5.4.1",
-    "ts-pattern": "^5.6.2",
-    "ws": "^8.14.2"
+    "ts-pattern": "^5.6.2"
   }
 }
