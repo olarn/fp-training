@@ -19,8 +19,8 @@ export const incrementThenToString: IncrementThenToString = x => toString(increm
 // --- 5/5
 type Compose = <N, S>(
   f: (y: N) => N,
-  g: (x: N) => S 
+  g: (x: N) => S
 ) =>
   (x: N) => S
 
-  export const compose: Compose = (f, g) => x => g(f(x))
+export const compose: Compose = (f, g) => x => g(f(x))
