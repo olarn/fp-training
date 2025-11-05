@@ -48,15 +48,6 @@ npm run dev
 npm run test
 ```
 
-## 📁 Project Structure
-
-```
-src/
-├── 01-TypeScript/
-│   └── typescript.test.ts   # Sample Jest test
-└── app.ts                   # Entry point for dev runs
-```
-
 ## 🛠️ Available Scripts
 
 | Script | Description |
