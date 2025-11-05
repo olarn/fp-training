@@ -88,12 +88,6 @@ npx jest /src/01-TypeScript/typescript.test.ts
 npm run test:watch
 ```
 
-### Test Structure
-Each module contains:
-- Implementation file (`.ts`)
-- Test file (`.test.ts`)
-- Completed version (`.finish.ts`) for reference
-
 ## 🔧 Development Setup
 
 ### Recommended VSCode Extensions
