@@ -1,9 +1,10 @@
 import { flow } from "effect/Function"
-import { 
-  increment, 
-  toString, 
+import {
+  increment,
+  toString,
   pipeIncrementThenToString,
-  flowIncrementThenToString } from "./pipe"
+  flowIncrementThenToString
+} from "./pipe"
 
 describe('incrementThenToString', () => {
   it('should increment the number and then convert it to a string with pipe', () => {
