@@ -3,6 +3,7 @@ import { Tree } from "../../04-Recursion/tree"
 interface Functor<A> {
   fmap<B>(f: (a: A) => B): Functor<B>
 }
+
 export class TreeF<A> implements Functor<A> {
   constructor(private readonly tree: Tree<A>) {}
 
