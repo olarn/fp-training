@@ -29,11 +29,12 @@ describe('Reuse Equal', () => {
   it('should compare 2 Person equally', () => {
     const person1: Person = { name: 'John', age: 30 }
     const person2: Person = { name: 'John', age: 30 }
+    const listOfPerson = [person1, person2]
 
     expect(
       contains(eqPerson)
         (person1)
-        ([person1, person2])
+        (listOfPerson)
     ).toBeTruthy()
   })
 })
