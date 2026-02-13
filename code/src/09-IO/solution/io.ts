@@ -9,6 +9,7 @@ const printLine = (message: string): Effect.Effect<void> =>
 export const program = pipe(
   readLine,
   Effect.map(str => `You entered: ${str}`),
-  Effect.tap(message => printLine(message))  
-  // tap() Runs a side effect with the result of an effect without changing the original value.
-)
+  Effect.tap(message => printLine(message)) 
+   
+  // note: tap() Runs a side effect with the result of an effect without changing the original value.
+) 
