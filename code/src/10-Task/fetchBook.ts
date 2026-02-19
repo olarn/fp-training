@@ -1,4 +1,4 @@
-import { IO, of } from "fp-ts/lib/IO"
+import { IO } from "fp-ts/lib/IO"
 
 type Book = {
   id: number
@@ -6,10 +6,22 @@ type Book = {
   author: string
 }
 
-const fetchBooks = (): IO<Promise<Book[]>> => {
-  return () => (fetch("https://jsonplaceholder.typicode.com/posts")
+export const fetchBooks = (): Promise<Book[]> =>
+  fetch("https://jsonplaceholder.typicode.com/posts")
     .then(res => res.json())
-    .then(data => data as Book[]))
-}
+    .then(data => data as Book[])
 
-fetchBooks()().then(books => console.log(books))
+
+// fetchBooks().then(books =>
+//   console.log(books[0])
+// )
+
+export const ioFetchBooks = (): IO<Promise<Book[]>> =>
+  () => fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(res => res.json())
+    .then(data => data as Book[])
+
+// const FetchBooks2 = ioFetchBooks()
+// FetchBooks2().then(books =>
+//   console.log(books.length)
+// )
