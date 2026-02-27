@@ -1,9 +1,9 @@
-import { calculateWorkDays } from "../CalculateWorkDays"
+import { summaryWorkDays } from "../App"
 
 describe("app", () => {
   it("should return the workday summary", () => {
-    const csvFile = "src/99-exercise/solution/tests/clock-in-out.csv"
-    const workDaySummary = calculateWorkDays(csvFile)
+    const fromCsvFile = "src/99-exercise/solution/tests/clock-in-out.csv"
+    const workDaySummary = summaryWorkDays(fromCsvFile)
     expect(
       workDaySummary
     ).toEqual([

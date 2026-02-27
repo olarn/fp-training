@@ -1,15 +1,14 @@
 import { pipe } from "effect/Function"
 import { map } from "effect/Array"
-import { loadCsv } from "./CsvLoader"
+import { loadCsv as loadCsvFileFrom } from "./CsvLoader"
 import { toTimeAttendant } from "./TimeAttendantConverter"
 import { WorkDaySummary } from "./TimeAttendant"
 import { toWorkdaySummary } from "./WorkdaySummery"
 import { distinctEmployee as byDistinctEmployeeIdsFrom } from "./DistinctEmployee"
 
-export const calculateWorkDays = (csvPath: string): WorkDaySummary[] => 
+export const summaryWorkDays = (path: string): WorkDaySummary[] => 
   pipe(
-    csvPath,
-    loadCsv,
+    loadCsvFileFrom(path),
     map(toTimeAttendant),
     timeAttendants => toWorkdaySummary(byDistinctEmployeeIdsFrom(timeAttendants))(timeAttendants)
   )
