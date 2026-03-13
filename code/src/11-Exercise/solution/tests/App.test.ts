@@ -2,7 +2,7 @@ import { summaryWorkDays } from "../App"
 
 describe("app", () => {
   it("should return the workday summary", () => {
-    const fromCsvFile = "src/99-exercise/solution/tests/clock-in-out.csv"
+    const fromCsvFile = "src/11-Exercise/solution/tests/clock-in-out.csv"
     const workDaySummary = summaryWorkDays(fromCsvFile)
     expect(
       workDaySummary
